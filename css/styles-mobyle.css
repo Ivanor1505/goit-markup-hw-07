@@ -164,7 +164,7 @@ body {
 
     .mobile-menu-container {
         position: relative;
-        padding: 80px 35px 40px 40px;
+
     }
 
     .menu-container {
@@ -174,13 +174,15 @@ body {
         z-index: 111;
         top: 0;
         left: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         background-color: var(--primery-bcg-color);
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
-    }
-
-    .mob-menu-list {
-        margin-bottom: 284px;
+        padding: 50px 15px 40px 15px;
     }
 
     .mob-menu-link {
@@ -363,8 +365,7 @@ screen and (max-width: 767px) {
         line-height: 1.11;
         text-align: center;
         margin: 0 auto 72px;
-        width: 320px;
-
+        max-width: 320px;
     }
 
     .order-button {
