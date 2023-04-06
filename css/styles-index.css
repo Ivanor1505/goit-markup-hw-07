@@ -162,11 +162,6 @@ body {
         line-height: 0;
     }
 
-    .mobile-menu-container {
-        position: relative;
-
-    }
-
     .menu-container {
         position: fixed;
         width: 100%;
@@ -249,6 +244,21 @@ body {
 
 }
 
+@media screen and (max-width: 375px) {
+    .menu-container {
+        padding: 30px 15px 15px 15px;
+    }
+
+    .mob-menu-tel {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .mob-menu-soc {
+        gap: 36px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .page-header {
@@ -290,13 +300,13 @@ body {
         color: var(--pressed-state-color);
     }
 
-    .studio-page[href="./index.html"] {
+    .nav-link.curent {
         position: relative;
         color: var(--primery-brand-color);
     }
 
 
-    .studio-page[href="./index.html"]::after {
+    .curent::after {
         position: absolute;
         content: "";
         display: block;
@@ -330,7 +340,7 @@ body {
         gap: 40px;
     }
 
-    .studio-page[href="./index.html"]::after {
+    .curent::after {
         top: 44px;
     }
 
@@ -343,54 +353,53 @@ body {
 /* !=========== Основний контент ========= */
 
 /** =========== Секція герой ========== */
-@media screen and (min-width: 480px),
-screen and (max-width: 767px) {
-    .hero {
-        text-align: center;
-        background-color: var(--hero-background-color);
-        padding-top: 112px;
-        padding-bottom: 112px;
+/* @media screen and (max-width: 767px) { */
+.hero {
+    text-align: center;
+    background-color: var(--hero-background-color);
+    padding-top: 112px;
+    padding-bottom: 112px;
 
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/people-office-mob.jpg);
-        background-size: cover;
-        max-width: 767px;
-        margin: 0 auto;
-    }
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office-mob.jpg);
+    background-size: cover;
+    max-width: 767px;
+    margin: 0 auto;
+}
 
-    .primary-title {
-        color: var(--primery-bcg-color);
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.11;
-        text-align: center;
-        margin: 0 auto 72px;
-        max-width: 320px;
-    }
+.primary-title {
+    color: var(--primery-bcg-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    margin: 0 auto 72px;
+    max-width: 320px;
+}
 
-    .order-button {
-        display: inline-block;
-        padding: 16px 32px;
-        min-width: 170px;
-        border-radius: 4px;
-        background-color: var(--primery-brand-color);
-        border: 2px solid transparent;
+.order-button {
+    display: inline-block;
+    padding: 16px 32px;
+    min-width: 170px;
+    border-radius: 4px;
+    background-color: var(--primery-brand-color);
+    border: 2px solid transparent;
 
-        text-align: center;
-        color: var(--primery-bcg-color);
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
+    text-align: center;
+    color: var(--primery-bcg-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
 
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    }
+}
 
-    .order-button:hover,
-    .order-button:focus {
-        background-color: var(--pressed-state-color);
-    }
+.order-button:hover,
+.order-button:focus {
+    background-color: var(--pressed-state-color);
+}
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -918,7 +927,6 @@ screen and (max-width: 767px) {
 
     }
 
-
     .backdrop.is-hidden {
         visibility: hidden;
         opacity: 0;
@@ -933,6 +941,7 @@ screen and (max-width: 767px) {
         top: 50%;
         left: 50%;
         padding: 72px 16px 24px 16px;
+        overflow-y: scroll;
 
         transform: translate(-50%, -50%) scale(1) rotateY(0);
         opacity: 1;
@@ -1129,6 +1138,5 @@ screen and (max-width: 767px) {
         .modal {
             width: 408px;
             padding: 72px 24px 24px 24px;
-
         }
     }

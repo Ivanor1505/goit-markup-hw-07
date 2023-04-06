@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
-    <link rel="stylesheet" href="./css/styles-mobyle.css" />
+    <link rel="stylesheet" href="./css/styles-index.css" />
   </head>
   <body>
     <!-- Шапка сайту -->
@@ -29,9 +29,7 @@
           >
           <ul class="nav list">
             <li class="nav-item">
-              <a class="nav-link link studio-page" href="./index.html"
-                >Studio</a
-              >
+              <a class="nav-link link curent" href="./index.html">Studio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link link" href="./portfolio.html">Portfolio</a>
@@ -42,7 +40,12 @@
 
         <!-- Кнопка для мобільних пристроїв -->
         <button type="button" class="mobile-menu-open js-open-menu">
-          <svg class="burger-icon" width="32" height="22">
+          <svg
+            aria-label="mobile menu button"
+            class="burger-icon"
+            width="32"
+            height="22"
+          >
             <use href="./images/icons.svg#menu-hamburger"></use>
           </svg>
         </button>
@@ -569,6 +572,7 @@
             class="form-check ghost"
             type="checkbox"
             name="privacy_policy"
+            value="true"
           />
           <label for="policy" class="modal-form-field check-field"
             ><span class="property-click-border"
